@@ -10,7 +10,7 @@ from urllib.parse import urlparse
 
 import certifi
 import urllib3
-from eosapi.exceptions import (
+from .exceptions import (
     EosdNoResponse,
     HttpAPIError,
 )

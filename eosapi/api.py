@@ -1,6 +1,6 @@
 import time
 
-from eosapi import HttpClient
+from .http_client import HttpClient
 
 
 class Client(HttpClient):
@@ -17,7 +17,7 @@ class Client(HttpClient):
              mode (str): `irreversible` or `head`.
         """
         mode = 'last_irreversible_block_num' if mode == 'irreversible' \
-            else 'head_block_number'
+            else 'head_block_num'
 
         # convert block id to block number
         if type(start_block) == str:
